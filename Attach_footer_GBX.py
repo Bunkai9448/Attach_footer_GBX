@@ -20,24 +20,24 @@ import argparse
 # ---------------------------------------------------------------
 MAPPER_TABLE = [
     # (ID,     descripción,                                     bytes,       default_battery)
-    ("ROM",   "ROM Only (sin mapper, juegos simples)",          b"ROM\x00",  False),
-    ("MBC1",  "MBC1 (mapper oficial Nintendo)",                 b"MBC1",     True),
-    ("MBC2",  "MBC2 (con RAM interna de 512 nibbles)",          b"MBC2",     True),
-    ("MBC3",  "MBC3 (con RTC en algunos cartuchos)",            b"MBC3",     True),
-    ("MBC5",  "MBC5 (mapper oficial más común en GBC)",         b"MBC5",     True),
-    ("MB1M",  "MBC1M (MBC1 multicart, para compilaciones)",     b"MB1M",     False),
-    ("NTN",   "NT new (Makon Soft moderno, Pokémon Diamond)",   b"NTN\x00",  True),
-    ("NTO1",  "NT old type 1 (Makon antiguo, Rockman 8)",       b"NTO1",     False),
-    ("NTO2",  "NT old type 2 (Makon antiguo, SMB3, DK5)",       b"NTO2",     False),
-    ("LICH",  "Li Cheng (también Xing Xing / Niutoude)",        b"LICH",     False),
+    ("ROM",   "ROM Only (sin mapper)",                          b"ROM\x00",  False),
+    ("MBC1",  "MBC1 compatible",                                b"MBC1",     True),
+    ("MBC2",  "MBC2",                                           b"MBC2",     True),
+    ("MBC3",  "MBC3 compatible",                                b"MBC3",     True),
+    ("MBC5",  "MBC5 compatible",                                b"MBC5",     True),
+    ("MB1M",  "MBC1M (multicart)",                              b"MB1M",     False),
+    ("NTN",   "NT (Makon) new",                                 b"NTN\x00",  True),
+    ("NTO1",  "NT (Makon) old type 1",                          b"NTO1",     False),
+    ("NTO2",  "NT (Makon) old type 2",                          b"NTO2",     False),
+    ("LICH",  "Li Cheng (XingXing/Niutoude)",                    b"LICH",     False),
     ("SACH",  "Sachen MMC1",                                    b"SACH",     False),
     ("SAM2",  "Sachen MMC2",                                    b"SAM2",     False),
-    ("BBD",   "BBD (mapper propio)",                            b"BBD\x00",  False),
+    ("BBD",   "BBD",                                            b"BBD\x00",  False),
     ("HITE",  "Hitek",                                          b"HITE",     False),
-    ("GB81",  "GGB-81 (Pokémon Action Chapter, etc.)",          b"GB81",     False),
+    ("GB81",  "GGB-81",                                         b"GB81",     False),
     ("ROCK",  "Rocket Games",                                   b"ROCK",     False),
-    ("TPP1",  "Pokémon Jade/Diamond (Telefang, versión 1)",     b"TPP1",     False),
-    ("PKJD",  "Pokémon Jade/Diamond (identificador alternativo)",b"PKJD",    False),
+    ("TPP1",  "Pokémon Jade/Diamond",                           b"TPP1",     False),
+    ("PKJD",  "Pokémon Jade/Diamond",                           b"PKJD",     False),
 ]
 
 # Diccionario rápido: ID -> (bytes, descripción, battery)
